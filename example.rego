@@ -64,3 +64,9 @@ rule11 {
 	negative := [x | x := input.numbers[_]; x < 0]
 	count(negative) == 0
 }
+
+# find image which prefix is any string of repos
+rule12[image] {
+	image = input.images[_]
+	startswith(image, input.repos[_])
+}

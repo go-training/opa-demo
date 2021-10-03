@@ -112,3 +112,33 @@ test_rule11 {
 	rule11 with input as {"numbers": [1, 2, 3, 4, 5]}
 	not rule11 with input as {"numbers": [1, 2, 3, 4, -5]}
 }
+
+rule12verify(answer) {
+  count(rule12) == answer
+}
+
+test_rule12 {
+	rule12verify(2) with input as {
+		"images": [
+			"docker.io/nginx",
+			"quay.io/ubuntu",
+			"localhost/nginx",
+		],
+		"repos": [
+			"docker.io",
+			"quay.io",
+		],
+	}
+
+	not rule12verify(3) with input as {
+		"images": [
+			"docker.io/nginx",
+			"quay.io/ubuntu",
+			"localhost/nginx",
+		],
+		"repos": [
+			"docker.io",
+			"quay.io",
+		],
+	}
+}
