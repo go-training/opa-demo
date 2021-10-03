@@ -1,5 +1,7 @@
 # opa-demo
 
+[![Open Policy Agent Testing](https://github.com/go-training/opa-demo/actions/workflows/opa.yml/badge.svg)](https://github.com/go-training/opa-demo/actions/workflows/opa.yml)
+
 Demo Rego language
 
 ## Run testing
