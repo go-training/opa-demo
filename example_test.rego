@@ -27,9 +27,7 @@ test_rule03 {
 		"x": 100,
 		"y": 200,
 	}
-}
 
-test_rule03_not_true {
 	not rule03Verify with input as {
 		"x": 200,
 		"y": 100,
