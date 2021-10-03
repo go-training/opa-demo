@@ -35,3 +35,31 @@ test_rule03_not_true {
 		"y": 100,
 	}
 }
+
+test_rule04 {
+	rule04 with input as {
+		"x": 100,
+		"y": 200,
+		"z": 300,
+	}
+
+	not rule04 with input as {
+		"x": 100,
+		"y": 200,
+		"z": 150,
+	}
+}
+
+test_rule05 {
+	rule05 with input as {
+		"x": 100,
+		"y": 200,
+		"z": 150,
+	}
+
+	not rule05 with input as {
+		"x": 300,
+		"y": 200,
+		"z": 100,
+	}
+}
