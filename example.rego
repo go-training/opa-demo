@@ -42,3 +42,8 @@ rule07[key] = image {
 	image := input.containers[key].image
 	endswith(image, ":latest")
 }
+
+rule08[x] {
+	x := input.numbers[_]
+	x % 2 == 0
+}

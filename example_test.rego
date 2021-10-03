@@ -87,4 +87,18 @@ test_rule07 {
 		"app": {"image": "app:18.04"},
 		"db": {"image": "db:latest"},
 	}}
+
+	not rule07verify("db:latest") with input as {"containers": {
+		"app": {"image": "app:18.04"},
+		"db": {"image": "postgres:latest"},
+	}}
+}
+
+rule08verify(answer) {
+	count(rule08) == answer
+}
+
+test_rule08 {
+	rule08verify(2) with input as {"numbers": [1, 2, 3, 4, 5]}
+	not rule08verify(2) with input as {"numbers": [1, 2, 3, 4, 5, 6]}
 }
