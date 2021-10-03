@@ -11,7 +11,7 @@ opa test -v .
 run single testing rule
 
 ```sh
-$ opa eval -i sample01/input.json -d sample01/example.rego "data.example.rule02"
+$ opa eval -i input.json -d example.rego "data.example.rule02"
 {
   "result": [
     {
