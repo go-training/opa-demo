@@ -100,3 +100,15 @@ test_rule08 {
 	rule08verify(2) with input as {"numbers": [1, 2, 3, 4, 5]}
 	not rule08verify(2) with input as {"numbers": [1, 2, 3, 4, 5, 6]}
 }
+
+test_rule09 {
+	rule09 with input as {"numbers": [1, 2, 3, 4, 5]}
+	rule09 with input as {"numbers": [1, 2, 3, 4, -5]}
+	not rule09 with input as {"numbers": [-1, -2, -3, -4, -5]}
+	rule10 with input as {"numbers": [-1, -2, -3, -4, -5]}
+}
+
+test_rule11 {
+	rule11 with input as {"numbers": [1, 2, 3, 4, 5]}
+	not rule11 with input as {"numbers": [1, 2, 3, 4, -5]}
+}
