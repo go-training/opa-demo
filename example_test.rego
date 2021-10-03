@@ -77,3 +77,14 @@ test_rule06 {
 		"b": 200,
 	}
 }
+
+rule07verify(answer) {
+	rule07.db == answer
+}
+
+test_rule07 {
+	rule07verify("db:latest") with input as {"containers": {
+		"app": {"image": "app:18.04"},
+		"db": {"image": "db:latest"},
+	}}
+}

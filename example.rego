@@ -37,3 +37,8 @@ default rule06 = false
 rule06 {
 	input.a < input.b
 }
+
+rule07[key] = image {
+	image := input.containers[key].image
+	endswith(image, ":latest")
+}
