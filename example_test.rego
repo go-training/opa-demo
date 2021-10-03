@@ -63,3 +63,17 @@ test_rule05 {
 		"z": 100,
 	}
 }
+
+test_rule06 {
+	not rule06 with input as {}
+
+	rule06 with input as {
+		"a": 100,
+		"b": 200,
+	}
+
+	not rule06 with input as {
+		"a": 300,
+		"b": 200,
+	}
+}

@@ -30,3 +30,10 @@ rule05 {
 rule05 {
 	input.y < input.z
 }
+
+# set default value
+default rule06 = false
+
+rule06 {
+	input.a < input.b
+}
