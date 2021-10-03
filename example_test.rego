@@ -114,7 +114,7 @@ test_rule11 {
 }
 
 rule12verify(answer) {
-  count(rule12) == answer
+	count(rule12) == answer
 }
 
 test_rule12 {
